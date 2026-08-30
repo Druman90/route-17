@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="it">
 <title>Caccia al Tesoro</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -55,13 +57,14 @@
 
   .screen{display:none}
   .screen.active{display:block;animation:fadeIn .45s ease}
+  .screen.active.intro,.screen.active.final{display:flex}
   @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   }
 
   /* ---------- intro ---------- */
-  .intro{min-height:92vh;display:flex;flex-direction:column;justify-content:center;gap:20px;text-align:center}
+  .intro{min-height:92vh;flex-direction:column;justify-content:center;gap:20px;text-align:center}
   .intro .kicker{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
   .intro h1{
     font-family:"Bricolage Grotesque","Instrument Sans",sans-serif;
@@ -142,7 +145,7 @@
   .feedback.ok{color:var(--ok)}
 
   /* ---------- final ---------- */
-  .final{min-height:92vh;display:flex;flex-direction:column;justify-content:center;gap:18px;text-align:center;position:relative}
+  .final{min-height:92vh;flex-direction:column;justify-content:center;gap:18px;text-align:center;position:relative}
   .final .big{font-size:4.2rem;line-height:1;margin:0}
   .final h2{
     font-family:"Bricolage Grotesque","Instrument Sans",sans-serif;
@@ -337,3 +340,5 @@ function confetti(){
 
 show("screen-intro");
 </script>
+
+</html>
